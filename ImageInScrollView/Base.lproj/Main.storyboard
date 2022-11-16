@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageInScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9P-PU-JQU">
+                                <rect key="frame" x="20" y="79" width="353" height="619"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="08B-06-mWk">
+                                        <rect key="frame" x="0.0" y="0.0" width="1500" height="619"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="08B-06-mWk" firstAttribute="trailing" secondItem="4Bn-BY-efS" secondAttribute="trailing" id="3ft-Yq-UlD"/>
+                                    <constraint firstItem="08B-06-mWk" firstAttribute="bottom" secondItem="4Bn-BY-efS" secondAttribute="bottom" id="U8j-W9-TaV"/>
+                                    <constraint firstItem="08B-06-mWk" firstAttribute="height" secondItem="RXW-ii-I1p" secondAttribute="height" id="lAj-u5-6dk"/>
+                                    <constraint firstItem="08B-06-mWk" firstAttribute="top" secondItem="4Bn-BY-efS" secondAttribute="top" id="uKI-k6-TaI"/>
+                                    <constraint firstItem="08B-06-mWk" firstAttribute="leading" secondItem="4Bn-BY-efS" secondAttribute="leading" id="v6d-ib-d9r"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4Bn-BY-efS"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="RXW-ii-I1p"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2F-Tj-c6G">
+                                <rect key="frame" x="20" y="718" width="353" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="l9U-EF-fRb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2F-Tj-c6G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2r8-ok-qzM"/>
+                            <constraint firstItem="S9P-PU-JQU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C0l-7t-kxD"/>
+                            <constraint firstItem="S9P-PU-JQU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h8e-6K-7q5"/>
+                            <constraint firstItem="b2F-Tj-c6G" firstAttribute="top" secondItem="S9P-PU-JQU" secondAttribute="bottom" constant="20" id="mMg-tS-g92"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2F-Tj-c6G" secondAttribute="bottom" constant="20" id="uaJ-PV-rgp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2F-Tj-c6G" secondAttribute="trailing" constant="20" id="wBg-P0-05x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9P-PU-JQU" secondAttribute="trailing" constant="20" id="wRg-x4-cQM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="08B-06-mWk" id="2ws-gg-eCb"/>
+                        <outlet property="scrollView" destination="S9P-PU-JQU" id="rnb-TR-IaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="1500" height="716"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
